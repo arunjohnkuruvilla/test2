@@ -41,7 +41,7 @@ def make_keywords():
 	size_five = 0
 	size_six = 0
 
-	for x in xrange(1,7):
+	for x in xrange(1,6):
 		if x == 1:																# Strings of length 1
 			if size_one == 0:
 				size_one = 1
