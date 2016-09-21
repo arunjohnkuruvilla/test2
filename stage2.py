@@ -69,7 +69,7 @@ def make_keywords_1(HASH_FILENAME, CHARACTERS_FILENAME, OUTPUT_FILENAME, PASSWOR
 			for password in passwords:
 				for x in xrange(0,100):
 					for char1 in chars:
-						string = password + char1 + str(format(x, '02d'))
+						string = str(format(x, '02d')) + password + char1
 						check_result = check(string, data)
 						if(check_result[0]):
 							print_out(OUTPUT_FILENAME, check_result[1], check_result[2])
@@ -79,7 +79,7 @@ def make_keywords_1(HASH_FILENAME, CHARACTERS_FILENAME, OUTPUT_FILENAME, PASSWOR
 				for x in xrange(0,100):
 					for char1 in chars:
 						for char2 in chars:
-							string = password + char1 + char2 + str(format(x, '02d'))
+							string = str(format(x, '02d')) + password + char1 + char2
 							check_result = check(string, data)
 							if(check_result[0]):
 								print_out(OUTPUT_FILENAME, check_result[1], check_result[2])
@@ -90,7 +90,7 @@ def make_keywords_1(HASH_FILENAME, CHARACTERS_FILENAME, OUTPUT_FILENAME, PASSWOR
 					for char1 in chars:
 						for char2 in chars:
 							for char3 in chars:
-								string = password + char1 + char2 + char3 + str(format(x, '02d'))
+								string = str(format(x, '02d')) + password + char1 + char2 + char3
 								check_result = check(string, data)
 								if(check_result[0]):
 									print_out(OUTPUT_FILENAME, check_result[1], check_result[2])
@@ -117,7 +117,7 @@ def make_keywords_2(HASH_FILENAME, CHARACTERS_FILENAME, OUTPUT_FILENAME, PASSWOR
 		if x == 1:																# Strings of length 1
 			for password in passwords:
 				for char1 in chars:
-					string = char1 + password + str(format(x, '02d'))
+					string = str(format(x, '02d')) + char1 + password
 					check_result = check(string, data)
 					if(check_result[0]):
 						print_out(OUTPUT_FILENAME, check_result[1], check_result[2])
@@ -126,7 +126,7 @@ def make_keywords_2(HASH_FILENAME, CHARACTERS_FILENAME, OUTPUT_FILENAME, PASSWOR
 			for password in passwords:
 				for char1 in chars:
 					for char2 in chars:
-						string = char1 + char2 + password + str(format(x, '02d'))
+						string = str(format(x, '02d')) + char1 + char2 + password
 						check_result = check(string, data)
 						if(check_result[0]):
 							print_out(OUTPUT_FILENAME, check_result[1], check_result[2])
@@ -136,7 +136,7 @@ def make_keywords_2(HASH_FILENAME, CHARACTERS_FILENAME, OUTPUT_FILENAME, PASSWOR
 				for char1 in chars:
 					for char2 in chars:
 						for char3 in chars:
-							string = char1 + char2 + char3 + password + str(format(x, '02d'))
+							string = str(format(x, '02d')) + char1 + char2 + char3 + password 
 							check_result = check(string, data)
 							if(check_result[0]):
 								print_out(OUTPUT_FILENAME, check_result[1], check_result[2])
